@@ -1,0 +1,20 @@
+html {
+    font-family: "forma-djr-micro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+h1 {
+    margin-top: 10px;
+    text-align: center;
+    letter-spacing: 50px;
+    font-size: 80px
+}
+
+body {
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 30px;
+    letter-spacing: 05px;
+}
