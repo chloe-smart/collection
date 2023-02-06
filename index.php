@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://use.typekit.net/rkk2hbc.css">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
-<header>
-<h1>ARTISTS</h1>
-</header>
+    <header>
+        <h1>ARTISTS</h1>
+    </header>
 <body>
     <p>Name:</p>
     <p>Favourite Medium:</p>
