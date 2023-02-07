@@ -6,17 +6,41 @@ use PHPUnit\Framework\TestCase;
 
 class Functions extends TestCase
 {
-    public function testGenerateArtistHtml()
+    public function testGenerateArtistHtmlSuccess()
     {
-        $artist= ['name' => 'Salvador Dali', 'yearsLived' => '11 May 1904 - 23 January 1989', 'image' => 'images/dali.jpg', 'favouriteMedium' => 'oil on canvas', 'knownFor' => 'exploring subconscious imagery, his most famous painting is The Persistence of Memory (1931), depicting limp melting watches', 'placeOfBirth' => 'Spain'];
-        $expectedOutput = '<h2>' . $artist['name'] . '</h2>' . 
-        '<p class="years">' . $artist['yearsLived'] . '</p>' .
-        '<img class="image" src=' . $artist['image'] . '>' .
-        '<p>Favourite Medium: ' . $artist['favouriteMedium'] . '</p>' . 
-        '<p>Known For: ' . $artist['knownFor'] . '</p>' . 
-        '<p>Place Of Birth: ' . $artist['placeOfBirth'] . '</p>';
+        $artistPlaceholder = ['name' => '', 'yearsLived' => '', 'image' => '', 'favouriteMedium' => '', 'knownFor' => '', 'placeOfBirth' => ''];
+        
+        $expectedOutput = '<h2>' . $artistPlaceholder['name'] . '</h2>' . 
+        '<p class="years">' . $artistPlaceholder['yearsLived'] . '</p>' .
+        '<img class="image" src=' . $artistPlaceholder['image'] . '>' .
+        '<p>Favourite Medium: ' . $artistPlaceholder['favouriteMedium'] . '</p>' . 
+        '<p>Known For: ' . $artistPlaceholder['knownFor'] . '</p>' . 
+        '<p>Place Of Birth: ' . $artistPlaceholder['placeOfBirth'] . '</p>';
 
-        $actualOutput = generateArtistHtml($artist);
+        $actualOutput = generateArtistHtml($artistPlaceholder);
+
         $this->assertEquals($expectedOutput, $actualOutput);
+    }
+
+    public function testGenerateArtistHtmlFail()
+    {
+        
+        $artistPlaceholderFail = ['sausages' => '', 'potatos' => '', 'gravy' => '', 'favouriteMedium' => '', 'knownFor' => '', 'placeOfBirth' => ''];
+       
+        $this->expectException(Exception::class);
+        
+        generateArtistHtml($artistPlaceholderFail);
+        
+    }
+
+    public function testGenerateArtistHtmlFai_indexed()
+    {
+        
+        $artistPlaceholderFail_indexed = ['', '', '', '', '', ''];
+       
+        $this->expectException(Exception::class);
+        
+        generateArtistHtml($artistPlaceholderFail_indexed);
+        
     }
 }
