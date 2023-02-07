@@ -19,6 +19,8 @@ print_r($artists);
 </head>
     <header>
         <h1>ARTISTS</h1>
+    
+    
     </header>
 <body>
     <?php
