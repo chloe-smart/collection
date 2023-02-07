@@ -1,5 +1,13 @@
 <?php
 
+require 'src/db.php';
+require 'src/function.php';
+
+$db = connectToDb('artistsApp');
+$artists = getAllArtists($db);
+print_r($artists);
+
+
 ?>
 
 <!DOCTYPE HTML>
@@ -13,9 +21,8 @@
         <h1>ARTISTS</h1>
     </header>
 <body>
-    <p>Name:</p>
-    <p>Favourite Medium:</p>
-    <p>Known For:</p>
-    <p>Place Of Birth:</p>
+    <?php
+       echo generateArtistHtml($artists);
+    ?>
 </body>
 </html>
