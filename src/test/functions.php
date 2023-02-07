@@ -12,10 +12,10 @@ class Functions extends TestCase
         
         $expectedOutput = '<h2>' . $artistPlaceholder['name'] . '</h2>' . 
         '<p class="years">' . $artistPlaceholder['yearsLived'] . '</p>' .
-        '<img class="image" src=' . $artistPlaceholder['image'] . '>' .
-        '<p>Favourite Medium: ' . $artistPlaceholder['favouriteMedium'] . '</p>' . 
-        '<p>Known For: ' . $artistPlaceholder['knownFor'] . '</p>' . 
-        '<p>Place Of Birth: ' . $artistPlaceholder['placeOfBirth'] . '</p>';
+        '<img alt="an image of artwork by ' . $artistPlaceholder['name'] . '" class="image" src=' . $artistPlaceholder['image'] . '>' .
+        '<h3>Favourite Medium: ' . $artistPlaceholder['favouriteMedium'] . '</h3>' . 
+        '<h3>Known For: ' . $artistPlaceholder['knownFor'] . '</h3>' . 
+        '<h3>Place Of Birth: ' . $artistPlaceholder['placeOfBirth'] . '</h3>';
 
         $actualOutput = generateArtistHtml($artistPlaceholder);
 
@@ -24,23 +24,21 @@ class Functions extends TestCase
 
     public function testGenerateArtistHtmlFail()
     {
+        $badArray1 = ['sausage' => '', 'potatos' => '', 'gravy' => '', 'favouriteMedium' => '', 'knownFor' => '', 'placeOfBirth' => ''];
         
-        $artistPlaceholderFail = ['sausages' => '', 'potatos' => '', 'gravy' => '', 'favouriteMedium' => '', 'knownFor' => '', 'placeOfBirth' => ''];
-       
         $this->expectException(Exception::class);
-        
-        generateArtistHtml($artistPlaceholderFail);
-        
-    }
 
-    public function testGenerateArtistHtmlFai_indexed()
+        generateArtistHtml($badArray1);
+    }
+        
+    public function testGenerateArtistHtmlFail_indexed()
     {
         
-        $artistPlaceholderFail_indexed = ['', '', '', '', '', ''];
-       
-        $this->expectException(Exception::class);
+        $badArray2 = ['', '', '', '', '', ''];
         
-        generateArtistHtml($artistPlaceholderFail_indexed);
-        
+        $this->expectException(Exception::class);   
+
+        generateArtistHtml($badArray2);
     }
-}
+} 
+
