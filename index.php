@@ -5,7 +5,6 @@ require 'src/function.php';
 
 $db = connectToDb('artistsApp');
 $artists = getAllArtists($db);
-print_r($artists);
 
 
 ?>
