@@ -24,6 +24,16 @@ body {
     height: 100%;
 }
 
+.image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.years {
+    font-size: 20px;
+}
+
 @media screen and (max-width: 1000px) {
 
     body {
@@ -48,6 +58,11 @@ body {
     body {
         margin-left: 50px;
         margin-right: 50px;
+    }
+
+    .image {
+        width: 300px;
+        height: 300px;
     }
 }
 

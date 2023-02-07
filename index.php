@@ -1,7 +1,7 @@
 <?php
 
 require 'src/db.php';
-require 'src/function.php';
+require 'src/functions.php';
 
 $db = connectToDb('artistsApp');
 $artists = getAllArtists($db);
@@ -23,7 +23,10 @@ $artists = getAllArtists($db);
     </header>
 <body>
     <?php
-       echo generateArtistHtml($artists);
+    foreach($artists as $artist) {
+    $artistsOutput = generateArtistHtml($artist);
+    echo $artistsOutput;
+    }
     ?>
 </body>
 </html>
