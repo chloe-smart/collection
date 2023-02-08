@@ -10,12 +10,12 @@ function generateArtistHtml(array $artists): string {
     && array_key_exists('placeOfBirth', $artists)) {
         return '<h2>' . $artists['name'] . '</h2>' . 
         '<p class="years">' . $artists['yearsLived'] . '</p>' .
-        '<img alt="an image of artwork by ' . $artists['name'] . '" class="image" src=' . $artists['image'] . '>' .
+        '<img class="image" src="images/' . $artists['image'] . ' "alt="an image of artwork by ' . $artists['name'] . '">' .
         '<p>Favourite Medium: ' . $artists['favouriteMedium'] . '</p>' . 
         '<p>Known For: ' . $artists['knownFor'] . '</p>' . 
         '<p>Place Of Birth: ' . $artists['placeOfBirth'] . '</p>';
     } else {
-        throw new Exception('Wrong array keys entered'); 
+        throw new Exception('Missing or incorrect array keys entered'); 
     }
 }
 

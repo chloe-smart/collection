@@ -23,8 +23,12 @@ $artists = getAllArtists($db);
 <body>
     <?php
     foreach($artists as $artist) {
-        $artistsOutput = generateArtistHtml($artist);
-        echo $artistsOutput;
+        try {
+            $artistsOutput = generateArtistHtml($artist);
+            echo $artistsOutput;
+        } catch (Exception $exception) {
+            error_log($exception->getMessage(), 3, "error.log"); 
+        }
     }
     ?>
 </body>
