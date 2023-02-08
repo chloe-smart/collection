@@ -13,9 +13,9 @@ class Functions extends TestCase
         $expectedOutput = '<h2>' . $artistPlaceholder['name'] . '</h2>' . 
         '<p class="years">' . $artistPlaceholder['yearsLived'] . '</p>' .
         '<img alt="an image of artwork by ' . $artistPlaceholder['name'] . '" class="image" src=' . $artistPlaceholder['image'] . '>' .
-        '<h3>Favourite Medium: ' . $artistPlaceholder['favouriteMedium'] . '</h3>' . 
-        '<h3>Known For: ' . $artistPlaceholder['knownFor'] . '</h3>' . 
-        '<h3>Place Of Birth: ' . $artistPlaceholder['placeOfBirth'] . '</h3>';
+        '<p>Favourite Medium: ' . $artistPlaceholder['favouriteMedium'] . '</p>' . 
+        '<p>Known For: ' . $artistPlaceholder['knownFor'] . '</p>' . 
+        '<p>Place Of Birth: ' . $artistPlaceholder['placeOfBirth'] . '</p>';
 
         $actualOutput = generateArtistHtml($artistPlaceholder);
 
