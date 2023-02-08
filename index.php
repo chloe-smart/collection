@@ -18,7 +18,7 @@ $artists = getAllArtists($db);
     <html lang="en"></html>
 </head>
     <header>
-        <h1>ARTISTS</h1>
+        <h1 tabindex=0 >ARTISTS</h1>
     </header>
 <body>
     <?php
