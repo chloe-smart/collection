@@ -17,7 +17,7 @@ class Functions extends TestCase
         
         $expectedOutput = '<h2>Salvador Dali</h2>' . 
             '<p class="years">11 May 1904 - 23 January 1989</p>' .
-            '<img class="image" src="images/src="images/dali.jpg" alt="an image of artwork by Salvador Dali" "alt="an image of artwork by Salvador Dali">' .
+            '<img src="images/src="images/dali.jpg" alt="an image of artwork by Salvador Dali" "alt="an image of artwork by Salvador Dali">' .
             '<p>Favourite Medium: oil on canvas</p>' . 
             '<p>Known For: exploring subconscious imagery, his most famous painting is The Persistence of Memory (1931), depicting limp melting watches</p>' . 
             '<p>Place Of Birth: Spain</p>';

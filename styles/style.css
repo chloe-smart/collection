@@ -23,7 +23,7 @@ body {
     letter-spacing: 5px;
 }
 
-.image {
+img {
     width: 400px;
     height: 400px;
     object-fit: cover;
