@@ -15,12 +15,12 @@ class Functions extends TestCase
             'knownFor' => 'exploring subconscious imagery, his most famous painting is The Persistence of Memory (1931), depicting limp melting watches',
             'placeOfBirth' => 'Spain'];
         
-        $expectedOutput = '<h2>Salvador Dali</h2>' . 
-            '<p class="years">11 May 1904 - 23 January 1989</p>' .
-            '<img src="images/src="images/dali.jpg" alt="an image of artwork by Salvador Dali" "alt="an image of artwork by Salvador Dali">' .
-            '<p>Favourite Medium: oil on canvas</p>' . 
-            '<p>Known For: exploring subconscious imagery, his most famous painting is The Persistence of Memory (1931), depicting limp melting watches</p>' . 
-            '<p>Place Of Birth: Spain</p>';
+        $expectedOutput = '<h2 tabindex=0 >Salvador Dali</h2>' . 
+            '<p tabindex=0 class="years">11 May 1904 - 23 January 1989</p>' .
+            '<img tabindex=0 src="images/src="images/dali.jpg" alt="an image of artwork by Salvador Dali" "alt="an image of artwork by Salvador Dali">' .
+            '<h3 tabindex=0 >Favourite Medium: oil on canvas</h3>' . 
+            '<h3 tabindex=0 >Known For: exploring subconscious imagery, his most famous painting is The Persistence of Memory (1931), depicting limp melting watches</h3>' . 
+            '<h3 tabindex=0 >Place Of Birth: Spain</h3>';
 
         $actualOutput = generateArtistHtml($artistPlaceholder);
 

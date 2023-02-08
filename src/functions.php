@@ -8,14 +8,15 @@ function generateArtistHtml(array $artists): string {
     && array_key_exists('favouriteMedium', $artists)
     && array_key_exists('knownFor', $artists)
     && array_key_exists('placeOfBirth', $artists)) {
-        return '<h2>' . $artists['name'] . '</h2>' . 
-        '<p class="years">' . $artists['yearsLived'] . '</p>' .
-        '<img src="images/' . $artists['image'] . ' "alt="an image of artwork by ' . $artists['name'] . '">' .
-        '<p>Favourite Medium: ' . $artists['favouriteMedium'] . '</p>' . 
-        '<p>Known For: ' . $artists['knownFor'] . '</p>' . 
-        '<p>Place Of Birth: ' . $artists['placeOfBirth'] . '</p>';
+        return '<h2 tabindex=0 >' . $artists['name'] . '</h2>' . 
+        '<p tabindex=0 class="years">' . $artists['yearsLived'] . '</p>' .
+        '<img tabindex=0 src="images/' . $artists['image'] . ' "alt="an image of artwork by ' . $artists['name'] . '">' .
+        '<h3 tabindex=0 >Favourite Medium: ' . $artists['favouriteMedium'] . '</h3>' . 
+        '<h3 tabindex=0 >Known For: ' . $artists['knownFor'] . '</h3>' . 
+        '<h3 tabindex=0 >Place Of Birth: ' . $artists['placeOfBirth'] . '</h3>';
     } else {
         throw new Exception('Missing or incorrect array keys entered'); 
     }
 }
 
+    
