@@ -17,15 +17,14 @@ $artists = getAllArtists($db);
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <html lang="en"></html>
 </head>
+<body>
     <header>
         <h1 tabindex=0 >ARTISTS</h1>
     </header>
-<body>
     <?php
     foreach($artists as $artist) {
         try {
-            $artistsOutput = generateArtistHtml($artist);
-            echo $artistsOutput;
+            echo generateArtistHtml($artist);
         } catch (Exception $exception) {
             error_log($exception->getMessage(), 3, "error.log"); 
         }

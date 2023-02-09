@@ -7,7 +7,7 @@ function connectToDb(string $dbName): PDO {
 }
 
 function getAllArtists(PDO $db): array {
-	$query = $db->prepare('SELECT * FROM artists;');
+	$query = $db->prepare('SELECT name, yearsLived, image, favouriteMedium, knownFor, placeOfBirth FROM artists;');
 	$query->execute();
 	return $query->fetchAll();
 }

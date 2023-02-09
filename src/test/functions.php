@@ -8,12 +8,14 @@ class Functions extends TestCase
 {
     public function testGenerateArtistHtmlSuccess()
     {
-        $artistPlaceholder = ['name' => 'Salvador Dali',
+        $artistPlaceholder = [
+            'name' => 'Salvador Dali',
             'yearsLived' => '11 May 1904 - 23 January 1989',
             'image' => 'src="images/dali.jpg" alt="an image of artwork by Salvador Dali"',
             'favouriteMedium' => 'oil on canvas',
             'knownFor' => 'exploring subconscious imagery, his most famous painting is The Persistence of Memory (1931), depicting limp melting watches',
-            'placeOfBirth' => 'Spain'];
+            'placeOfBirth' => 'Spain'
+        ];
         
         $expectedOutput = '<h2 tabindex=0 >Salvador Dali</h2>' . 
             '<p tabindex=0 class="years">11 May 1904 - 23 January 1989</p>' .
@@ -29,12 +31,14 @@ class Functions extends TestCase
 
     public function testGenerateArtistHtmlFail()
     {
-        $badArray1 = ['sausages' => 'Salvador Dali',
+        $badArray1 = [
+            'sausages' => 'Salvador Dali',
             'potatos' => '11 May 1904 - 23 January 1989',
             'gravy' => 'src="images/dali.jpg" alt="an image of artwork by Salvador Dali"',
             'favouriteMedium' => 'oil on canvas',
             'knownFor' => 'exploring subconscious imagery, his most famous painting is The Persistence of Memory (1931), depicting limp melting watches',
-            'placeOfBirth' => 'Spain'];
+            'placeOfBirth' => 'Spain'
+        ];
         
         $this->expectException(Exception::class);
 
@@ -44,12 +48,14 @@ class Functions extends TestCase
     public function testGenerateArtistHtmlFail_indexed()
     {
         
-        $badArray2 = ['Salvador Dali',
+        $badArray2 = [
+            'Salvador Dali',
             '11 May 1904 - 23 January 1989',
             'src="images/dali.jpg" alt="an image of artwork by Salvador Dali"',
             'oil on canvas',
             'exploring subconscious imagery, his most famous painting is The Persistence of Memory (1931), depicting limp melting watches',
-            'Spain'];
+            'Spain'
+        ];
         
         $this->expectException(Exception::class);   
 
