@@ -1,0 +1,74 @@
+html {
+    font-family: "forma-djr-micro", sans-serif;
+    font-style: normal;
+    line-height: 50px;
+}
+
+h1 {
+    text-align: center;
+    letter-spacing: 50px;
+    font-size: 70px;
+}
+
+h2 {
+    margin-top: 100px;
+}
+
+h3 {
+    font-weight: 300;
+}
+
+body {
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.years {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 1000px) {
+
+    body {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+
+    h1 {
+        letter-spacing: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        letter-spacing: 5px;
+    }
+
+    body {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    h1 {
+        letter-spacing: 0;
+    }
+}
